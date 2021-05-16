@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <svg width="1000" height="1000">
+
+        <!-- 将多个基础图像分为一组 -->
+        <g id="g1">
+            <rect x="10" y="10" width="50" height="90"></rect>
+            <circle cx="100" cy="100" r="20"></circle>
+        </g>
+        <use href="#g1" x="200" y="200" fill="red"></use>
+        <!-- defs标签用于自定义形状，内部代码不显示，仅提供应用（像函数），只有用use标签引用的时候才会显示 -->
+        <defs>
+            <g id="defs1">
+                <rect x="300" y="300" width="91" height="30"></rect>
+                <circle cx="400" cy="400" r="50"></circle>
+            </g>
+        </defs>
+        <use href="#defs1" x="20" y="20" fill="blue"></use>
+    </svg>
+</body>
+</html>
